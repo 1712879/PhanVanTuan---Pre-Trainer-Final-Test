@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Caro Game</title>
+	<style type="text/css">
+		.container{
+			display: grid;
+			grid-template-rows: auto auto;
+			justify-content: center;
+		}
+		
+		#board{
+			display: flex;
+			margin-top: 20px;
+		}
+
+		.col{
+			width: 50px;
+			height: 50px;
+			border: 1px solid black;
+			cursor: pointer;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+		#notification{
+			color: red;
+			margin-bottom: 5px; 
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="notification"></div>
+
+		<form id="myForm">
+		  <span>
+		  	<label>n: </label>
+			<input type="text" name="n" id="n" value="3">
+			<label>m: </label>
+			<input type="text" name="m" id="m" value="3">
+		  </span>
+		  <span>
+		  	<input type="button" onclick="mySubmit()" value="Tạo">
+		  </span>
+		</form>
+		
+		<button onclick="reset()" style="width: 100px; margin-top: 10px;">Reset</button>
+		<div id="board">
+			
+
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

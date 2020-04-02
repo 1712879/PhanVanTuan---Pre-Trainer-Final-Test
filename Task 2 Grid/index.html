@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 2: Grid</title>
+	<style>
+		table {
+		  border-collapse: collapse;
+		  width: 100%;
+		  margin-top: 20px;
+		}
+		thead, tbody, tr, td, th { display: block; }
+		tr:after {
+            content: ' ';
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+
+        thead th {
+            height: 30px;
+        }
+
+        tbody {
+            height: 700px;
+            overflow-y: auto;
+        }
+
+		tr{
+			display: flex;
+		}
+
+        
+		td, th {
+		  border: 1px solid black;
+		}
+
+		#tr{
+			background-color: #fdcb6e;
+		}
+
+		.celi{
+			width: 40px;
+			height: 40px;
+			padding: 6px;
+		}
+		.none{
+			display: none;
+		}
+		.fixed{
+			position: fixed;
+			top: 0;
+		}
+		#tr .celi{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="form">
+		<form id="myForm">
+			<span>
+			  	<label>n: </label>
+				<input type="text" name="n" id="n">
+				<label>m: </label>
+				<input type="text" name="m" id="m">
+		  </span>
+		  <span>
+		  	<input type="button" onclick="mySubmit()" value="Tạo">
+		  </span>
+		  
+		</form>
+	</div>
+	<div class="container">
+		<table id="mytable" class="table-body">
+			<thead id="header">
+				<tr id="tr">
+				</tr>
+			</thead>
+			<tbody id="tbody">
+				
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
