@@ -76,7 +76,7 @@ table.addEventListener('scroll', function() {
 window.addEventListener('scroll', function(){
 	var header = document.querySelector('#header');
 	var form = document.querySelector('.form');
-	if(window.pageYOffset >= header.offsetTop) {
+	if(window.pageYOffset > header.offsetTop) {
 		console.log('add');
 	    form.classList.add("none");
 	    header.classList.add("fixed");
